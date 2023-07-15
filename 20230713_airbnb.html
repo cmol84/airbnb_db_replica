@@ -1,0 +1,528 @@
+<html><head> \m<title>Schema Report for database: airbnb</title> 
+<style>
+        td,th {
+        text-align:left;
+        vertical-align:middle;
+        }
+        table {
+        border-collapse: collapse;
+        border: 1px solid;
+        }
+        caption, th, td {
+        padding: .2em .8em;
+        border: 1px solid #000000;
+        }
+        caption {
+        background: #D3D3D3;
+        font-weight: bold;
+        font-size: 1.1em;
+        }
+        th {
+        font-weight: bold;
+        background: #000000;
+        color: white;
+        }
+        td {
+        background: #FFFFFF;
+        }
+        </style>
+      </head>
+     <body>
+<h1>Schema Report for database: airbnb</h1> 
+<a id="home">Table List </a><br /><ul> 
+ <li><a href="#Amenities">Amenities </a></li> 
+<li><a href="#AvailableBookingSlot">AvailableBookingSlot </a></li> 
+<li><a href="#BankDetails">BankDetails </a></li> 
+<li><a href="#Bedrooms">Bedrooms </a></li> 
+<li><a href="#Booking">Booking </a></li> 
+<li><a href="#Category">Category </a></li> 
+<li><a href="#CreditCard">CreditCard </a></li> 
+<li><a href="#EmergencyContact">EmergencyContact </a></li> 
+<li><a href="#Guest">Guest </a></li> 
+<li><a href="#Host">Host </a></li> 
+<li><a href="#HouseRule">HouseRule </a></li> 
+<li><a href="#Message">Message </a></li> 
+<li><a href="#Promo">Promo </a></li> 
+<li><a href="#Property">Property </a></li> 
+<li><a href="#PropertyAmenities">PropertyAmenities </a></li> 
+<li><a href="#PropertyCategories">PropertyCategories </a></li> 
+<li><a href="#PropertyOnWishlist">PropertyOnWishlist </a></li> 
+<li><a href="#PropertyPhoto">PropertyPhoto </a></li> 
+<li><a href="#PropertyReview">PropertyReview </a></li> 
+<li><a href="#PropertyReviewPhoto">PropertyReviewPhoto </a></li> 
+<li><a href="#User">User </a></li> 
+<li><a href="#UserReview">UserReview </a></li> 
+<li><a href="#Wishlist">Wishlist </a></li> 
+</ul> 
+<a id="Amenities"></a><table style="width:100%"><caption>Table: Amenities </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idAmenity</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>idProperty</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr> 
+<tr><td>AmenityName</td><td>VARCHAR(255)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="AvailableBookingSlot"></a><table style="width:100%"><caption>Table: AvailableBookingSlot </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idProperty</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr> 
+<tr><td>StartDate</td><td>DATE</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>EndDate</td><td>DATE</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="BankDetails"></a><table style="width:100%"><caption>Table: BankDetails </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idBankDetails</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>IBAN</td><td>VARCHAR(24)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>BIC</td><td>VARCHAR(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>BankName</td><td>VARCHAR(100)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>createdDate</td><td>TIMESTAMP</td><td>No</td><td>No</td><td>No</td><td>CURRENT_TIMESTAMP()</td><td></td></tr> 
+<tr><td>FK_idHost</td><td>INT(11)</td><td>No</td><td>No</td><td>Yes</td><td>NULL</td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="Bedrooms"></a><table style="width:100%"><caption>Table: Bedrooms </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idProperty</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr> 
+<tr><td>BedroomsAvailable</td><td>DECIMAL(6,1)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>BedType</td><td>VARCHAR(100)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>Beds</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="Booking"></a><table style="width:100%"><caption>Table: Booking </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idBooking</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>CheckInDate</td><td>DATE</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>CheckOutDate</td><td>DATE</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>AmountPaid</td><td>DECIMAL(6,2)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>BookingDate</td><td>DATE</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>ModifiedDate</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>SeniorGuests</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>0</td><td></td></tr> 
+<tr><td>Adults</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>0</td><td></td></tr> 
+<tr><td>Children</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>0</td><td></td></tr> 
+<tr><td>IsCancelled</td><td>TINYINT(1)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>RefundPaid</td><td>TINYINT(1)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>CancelDate</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>idPromo</td><td>INT(11)</td><td>No</td><td>No</td><td>Yes</td><td>NULL</td><td></td></tr> 
+<tr><td>idGuest</td><td>INT(11)</td><td>No</td><td>No</td><td>Yes</td><td>NULL</td><td></td></tr> 
+<tr><td>idProperty</td><td>INT(11)</td><td>No</td><td>No</td><td>Yes</td><td>NULL</td><td></td></tr> 
+<tr><td>TotalPrice</td><td>DECIMAL(6,2)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>Tax</td><td>DECIMAL(4,2)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>TotalPriceWithTax</td><td>DECIMAL(6,2)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>AmountDue</td><td>DECIMAL(6,2)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>RefundAmt</td><td>DECIMAL(6,2)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>MinimumStay</td><td>INT(11)</td><td>Yes</td><td>No</td><td>No</td><td>1</td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="Category"></a><table style="width:100%"><caption>Table: Category </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idCategory</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>CategoryName</td><td>VARCHAR(100)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="CreditCard"></a><table style="width:100%"><caption>Table: CreditCard </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idCreditCard</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>CreditCardType</td><td>VARCHAR(100)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>CardNumber</td><td>VARCHAR(25)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>CardHolderName</td><td>VARCHAR(55)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>ExpiryDate</td><td>VARCHAR(5)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>SecCode</td><td>VARCHAR(5)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>LastModifiedDate</td><td>TIMESTAMP</td><td>No</td><td>No</td><td>No</td><td>CURRENT_TIMESTAMP()</td><td></td></tr> 
+<tr><td>FK_Guest</td><td>INT(11)</td><td>No</td><td>No</td><td>Yes</td><td>NULL</td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="EmergencyContact"></a><table style="width:100%"><caption>Table: EmergencyContact </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idEmergencyContact</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>EmergencyContactName</td><td>VARCHAR(50)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>EmergencyContactRelationship</td><td>VARCHAR(20)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>EmergencyContactPreferredLanguage</td><td>VARCHAR(100)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>EmergencyContactEmail</td><td>VARCHAR(200)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>EmergencyContactCountry</td><td>VARCHAR(100)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>EmergencyContactPhone</td><td>VARCHAR(25)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>id_user</td><td>INT(11)</td><td>No</td><td>No</td><td>Yes</td><td>NULL</td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="Guest"></a><table style="width:100%"><caption>Table: Guest </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idGuest</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>idUser</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr> 
+<tr><td>AverageRating</td><td>DECIMAL(2,1)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>NumberOfRatings</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>0</td><td></td></tr> 
+<tr><td>idCreditCard</td><td>INT(11)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>GovernmentID</td><td>BLOB</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>YearsOnPlatform</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>VerifiedIdentity</td><td>TINYINT(4)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>CurrentResidence</td><td>VARCHAR(255)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>SpokenLanguages</td><td>VARCHAR(255)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="Host"></a><table style="width:100%"><caption>Table: Host </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idHost</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>idUser</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr> 
+<tr><td>IsSuperHost</td><td>TINYINT(1)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>Rating</td><td>DECIMAL(2,1)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>NumberOfRatings</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>idBankDetails</td><td>INT(11)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>createdDate</td><td>TIMESTAMP</td><td>No</td><td>No</td><td>No</td><td>CURRENT_TIMESTAMP()</td><td></td></tr> 
+<tr><td>YearsHosting</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>SpokenLanguages</td><td>VARCHAR(300)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="HouseRule"></a><table style="width:100%"><caption>Table: HouseRule </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idRule</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>idProperty</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr> 
+<tr><td>RuleName</td><td>VARCHAR(50)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>RuleDetails</td><td>VARCHAR(1000)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="Message"></a><table style="width:100%"><caption>Table: Message </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idMessage</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>Created</td><td>DATE</td><td>Yes</td><td>No</td><td>No</td><td>CURRENT_TIMESTAMP()</td><td></td></tr> 
+<tr><td>Message_To</td><td>INT(11)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>Message_From</td><td>INT(11)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>Message</td><td>TEXT</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>id_guest</td><td>INT(11)</td><td>No</td><td>No</td><td>Yes</td><td>NULL</td><td></td></tr> 
+<tr><td>id_host</td><td>INT(11)</td><td>No</td><td>No</td><td>Yes</td><td>NULL</td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="Promo"></a><table style="width:100%"><caption>Table: Promo </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idPromo</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>Code</td><td>VARCHAR(50)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>Discount_Amt</td><td>DECIMAL(19,2)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="Property"></a><table style="width:100%"><caption>Table: Property </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idProperty</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>PropertyName</td><td>VARCHAR(100)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>PropertyDescription</td><td>VARCHAR(500)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>PostCode</td><td>INT(11)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>Bathrooms</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>Bedrooms</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>0</td><td></td></tr> 
+<tr><td>MaxGuestsAllowed</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>PricePerNight</td><td>DECIMAL(6,2)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>CleaningFee</td><td>DECIMAL(4,2)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>Created</td><td>DATETIME</td><td>Yes</td><td>No</td><td>No</td><td>CURRENT_TIMESTAMP()</td><td></td></tr> 
+<tr><td>CheckInTime</td><td>TIMESTAMP</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>CheckOutTime</td><td>TIMESTAMP</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>IsRefundable</td><td>TINYINT(1)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>CancellationPeriod</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>CancellationType</td><td>VARCHAR(10)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>RefundRate</td><td>DECIMAL(4,1)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>NumOfRatings</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>0</td><td></td></tr> 
+<tr><td>AverageRatings</td><td>DECIMAL(2,1)</td><td>No</td><td>No</td><td>No</td><td>0.0</td><td></td></tr> 
+<tr><td>idHost</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr> 
+<tr><td>Street</td><td>VARCHAR(255)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>StreetNo</td><td>VARCHAR(12)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>City</td><td>VARCHAR(100)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>Country</td><td>VARCHAR(200)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>TaxRate</td><td>FLOAT</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="PropertyAmenities"></a><table style="width:100%"><caption>Table: PropertyAmenities </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idPropertyAmenity</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>idProperty</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr> 
+<tr><td>idAmenity</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="PropertyCategories"></a><table style="width:100%"><caption>Table: PropertyCategories </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idPropertyCategory</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>idProperty</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr> 
+<tr><td>idCategory</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="PropertyOnWishlist"></a><table style="width:100%"><caption>Table: PropertyOnWishlist </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idProperty</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr> 
+<tr><td>idGuest</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr> 
+<tr><td>idWishlist</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr> 
+<tr><td>CheckInDate</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>CheckOutDate</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="PropertyPhoto"></a><table style="width:100%"><caption>Table: PropertyPhoto </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idPhoto</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>idProperty</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr> 
+<tr><td>PropertyName</td><td>VARCHAR(100)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>ImageFile</td><td>BLOB</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="PropertyReview"></a><table style="width:100%"><caption>Table: PropertyReview </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idPropertyReview</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>idProperty</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr> 
+<tr><td>idGuest</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr> 
+<tr><td>Created_Time</td><td>TIMESTAMP</td><td>Yes</td><td>No</td><td>No</td><td>CURRENT_TIMESTAMP()</td><td></td></tr> 
+<tr><td>Modified_Time</td><td>TIMESTAMP</td><td>Yes</td><td>No</td><td>No</td><td>CURRENT_TIMESTAMP() ON UPDATE CURRENT_TIMESTAMP()</td><td></td></tr> 
+<tr><td>CommentInReview</td><td>VARCHAR(1000)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>Cleanliness_Rating</td><td>DECIMAL(2,1)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>Communication_Rating</td><td>DECIMAL(2,1)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>CheckIn_Rating</td><td>DECIMAL(2,1)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>Accuracy_Rating</td><td>DECIMAL(2,1)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>Location_Rating</td><td>DECIMAL(2,1)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>Value_Rating</td><td>DECIMAL(2,1)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>Overall_Rating</td><td>DECIMAL(2,1)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="PropertyReviewPhoto"></a><table style="width:100%"><caption>Table: PropertyReviewPhoto </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idGuest</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr> 
+<tr><td>idProperty</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr> 
+<tr><td>PhotoTitle</td><td>VARCHAR(50)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>ImageFile</td><td>BLOB</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="User"></a><table style="width:100%"><caption>Table: User </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idUser</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>DateOfBirth</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>Email</td><td>VARCHAR(100)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>UserPassword</td><td>VARCHAR(20)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>About</td><td>VARCHAR(255)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>Phone</td><td>VARCHAR(50)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>ProfilePhotoName</td><td>VARCHAR(50)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>ProfilePhoto</td><td>BLOB</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>Address</td><td>VARCHAR(255)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>FirstName</td><td>VARCHAR(50)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>LastName</td><td>VARCHAR(50)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>CreatedDate</td><td>TIMESTAMP</td><td>No</td><td>No</td><td>No</td><td>CURRENT_TIMESTAMP()</td><td></td></tr> 
+<tr><td>LastLogin</td><td>TIMESTAMP</td><td>No</td><td>No</td><td>No</td><td>ON UPDATE CURRENT_TIMESTAMP()</td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="UserReview"></a><table style="width:100%"><caption>Table: UserReview </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idUserReview</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>idHost</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr> 
+<tr><td>idGuest</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr> 
+<tr><td>GuestRating</td><td>DECIMAL(2,1)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>HostRating</td><td>DECIMAL(2,1)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>CommentForHost</td><td>VARCHAR(1000)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>CommentForGuest</td><td>VARCHAR(1000)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>HostReviewCreated</td><td>TIMESTAMP</td><td>Yes</td><td>No</td><td>No</td><td>CURRENT_TIMESTAMP()</td><td></td></tr> 
+<tr><td>GuestReviewCreated</td><td>TIMESTAMP</td><td>Yes</td><td>No</td><td>No</td><td>CURRENT_TIMESTAMP()</td><td></td></tr> 
+<tr><td>HostReviewModified</td><td>TIMESTAMP</td><td>No</td><td>No</td><td>No</td><td>CURRENT_TIMESTAMP() ON UPDATE CURRENT_TIMESTAMP()</td><td></td></tr> 
+<tr><td>GuestReviewModified</td><td>TIMESTAMP</td><td>No</td><td>No</td><td>No</td><td>CURRENT_TIMESTAMP() ON UPDATE CURRENT_TIMESTAMP()</td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="Wishlist"></a><table style="width:100%"><caption>Table: Wishlist </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idWishlist</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>idGuest</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr> 
+<tr><td>WishlistName</td><td>VARCHAR(50)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>Privacy</td><td>TINYINT(1)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+</body></html> 
